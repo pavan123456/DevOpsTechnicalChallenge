@@ -1,18 +1,8 @@
-# Labels consumed by Red Hat build service
+# Labels consumed by nginx build service
 #docker build -t nginx .
 
 FROM centos:centos7
-MAINTAINER The CentOS Project <cloud-ops@centos.org>
-
-ENV WEB_DOCUMENT_ROOT=/app \
-    WEB_DOCUMENT_INDEX=index.php \
-    WEB_ALIAS_DOMAIN=*.vm \
-    WEB_PHP_TIMEOUT=600 \
-    WEB_PHP_SOCKET=""
-ENV WEB_PHP_SOCKET=127.0.0.1:9000
-
-COPY conf/ /opt/docker/
-
+MAINTAINER The CentOS Project <pavank@Xxx.org>
 # Labels consumed by Red Hat build service
 LABEL Component="nginx" \
       Name="centos/nginx-180-centos7" \
